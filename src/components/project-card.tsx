@@ -7,8 +7,9 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
+import type { StaticImageData } from "next/image";
 
-function ProjectImage({ src, alt }: { src: string; alt: string }) {
+function ProjectImage({ src , alt }: { src: string| StaticImageData; alt: string }) {
   const [imageError, setImageError] = useState(false);
 
   if (!src || imageError) {
@@ -17,7 +18,7 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
 
   return (
     <img
-      src={src}
+      src={typeof src === "string" ? src : src.src}
       alt={alt}
       className="w-full h-48 object-cover"
       onError={() => setImageError(true)}

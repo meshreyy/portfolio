@@ -10,8 +10,9 @@ import {
 import { DATA } from "@/data/resume";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { StaticImageData } from "next/image";
 
-function LogoImage({ src, alt }: { src: string; alt: string }) {
+function LogoImage({ src, alt }: { src: string | StaticImageData; alt: string }) {
   const [imageError, setImageError] = useState(false);
 
   if (!src || imageError) {
@@ -22,7 +23,7 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 
   return (
     <img
-      src={src}
+      src={typeof src === "string" ? src : src.src}
       alt={alt}
       className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
       onError={() => setImageError(true)}
