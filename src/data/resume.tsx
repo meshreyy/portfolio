@@ -8,7 +8,6 @@ import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Csharp } from "@/components/ui/svgs/csharp";
 import ofLogo from "@/components/ui/of_profile.png";
-import profile from "@/components/ui/profile_photo.webp";
 import sihLogo from "@/components/ui/sih.png";
 import bvLogo from "@/components/ui/bv.png";
 import perpLogo from "@/components/ui/perp_photo.png";
@@ -25,7 +24,7 @@ export const DATA = {
     "Full-Stack Engineer building low-latency systems, AI applications, and developer tools.",
   summary:
     "Full-Stack Engineer focused on low-latency systems, AI products, and developer tools. Recently shipped a [Skill Recommendation System](/#projects) with TF-IDF and cosine similarity, placed in the [Top 45 teams at SIH 2025](/#hackathons), and merged a production feature during GSSoC 2025. Also climbed from ~Rank 500 to Top 10 in the TLE Eliminators competitive programming course.",
-  avatarUrl: "/me.webp",
+  avatarUrl: "/profile_photo.webp",
   skills: [
     { name: "C++", icon: Csharp },
     { name: "JavaScript" },
