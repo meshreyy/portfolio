@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { FileTextIcon, HomeIcon } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Nodejs } from "@/components/ui/svgs/nodejs";
@@ -24,7 +24,7 @@ export const DATA = {
   description:
     "Full-Stack Engineer building low-latency systems, AI applications, and developer tools.",
   summary:
-    "I'm Shreya, a Full-Stack Engineer who builds end-to-end products across frontend, backend, and AI. I recently built a [Skill Recommendation System](/#projects) in Python that uses TF-IDF and cosine similarity to match user profiles against job requirements and recommend missing skills, relevant companies, and salary insights. Selected among the [Top 45 teams nationwide in SIH 2025](/#hackathons), improved from ~Rank 500 to Top 10 in the TLE Eliminators Competitive Programming course, and contributed a merged feature to production during GSSoC 2025.",
+    "Full-Stack Engineer focused on low-latency systems, AI products, and developer tools. Recently shipped a [Skill Recommendation System](/#projects) with TF-IDF and cosine similarity, placed in the [Top 45 teams at SIH 2025](/#hackathons), and merged a production feature during GSSoC 2025. Also climbed from ~Rank 500 to Top 10 in the TLE Eliminators competitive programming course.",
   avatarUrl: "/me.webp",
   skills: [
     { name: "C++", icon: Csharp },
@@ -46,7 +46,11 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    {
+      href: "/Shreya_Jha_Resume.pdf",
+      icon: FileTextIcon,
+      label: "Resume",
+    },
   ],
   contact: {
     email: "iamjhashreya@gmail.com",
