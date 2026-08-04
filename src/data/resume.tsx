@@ -92,7 +92,7 @@ export const DATA = {
       
       logoUrl: ofLogo,
       start: "Oct 2025",
-      end: "Present",
+      end: "July 2026",
       description:
         "Worked on large-scale data pipelines using BigQuery, built automated reporting systems, and helped recover ~100k claims by identifying a critical data issue.",
     },
