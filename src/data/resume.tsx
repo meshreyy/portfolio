@@ -13,6 +13,7 @@ import bvLogo from "@/components/ui/bv.png";
 import perpLogo from "@/components/ui/perp_photo.png";
 import skillRecLogo from "@/components/ui/skill_rec_photo.png";
 import funshikshaLogo from "@/components/ui/funshiksha_photo.png";
+import interstateLogo from "@/components/ui/interstate.png";
 
 export const DATA = {
   name: "Shreya Jha",
@@ -23,7 +24,7 @@ export const DATA = {
   description:
     "Full-Stack Engineer building low-latency systems, AI applications, and developer tools.",
   summary:
-    "Full-Stack Engineer focused on low-latency systems, AI products, and developer tools. Recently shipped a [Skill Recommendation System](/#projects) with TF-IDF and cosine similarity, placed in the Top 45 teams at SIH 2025, and merged a production feature during GSSoC 2025. Also climbed from ~Rank 500 to Top 10 in the TLE Eliminators competitive programming course.",
+    "Full-Stack Engineer focused on low-latency systems, AI products, and developer tools. At [Interstate](https://interstate.trade/landing), I owned multi-chain holder-count infrastructure spanning Go indexers, Redis, token services, APIs, and React clients, while building reusable integrations across 56 launchpads. I also shipped a [Skill Recommendation System](/#projects) with TF-IDF and cosine similarity and placed in the Top 45 teams at SIH 2025.",
   avatarUrl: "/profile_photo.webp",
   skills: [
     { name: "C++", icon: Csharp },
@@ -83,6 +84,18 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "Interstate",
+      href: "https://interstate.trade/landing",
+      badges: [],
+      location: "Remote",
+      title: "Full Stack Engineer",
+      logoUrl: interstateLogo,
+      start: "July 2026",
+      end: "October 2026",
+      description:
+        "Owned multi-chain holder-count infrastructure across Go indexers, Redis, APIs, and React clients for four EVM chains. Built idempotent KOL ingestion and safe ERC-20 backfill tooling, while developing reusable chain and launchpad integrations supporting 56 venues.",
+    },
     {
       company: "Ocean Friends",
       href: "#",
