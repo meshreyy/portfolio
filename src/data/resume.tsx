@@ -104,8 +104,8 @@ export const DATA = {
       title: "Data Analytics Intern",
       
       logoUrl: ofLogo,
-      start: "Oct 2025",
-      end: "July 2026",
+      start: "October 2025",
+      end: "March 2026",
       description:
         "Worked on large-scale data pipelines using BigQuery, built automated reporting systems, and helped recover ~100k claims by identifying a critical data issue.",
     },
