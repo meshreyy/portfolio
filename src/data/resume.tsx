@@ -6,7 +6,6 @@ import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Python } from "@/components/ui/svgs/python";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
-import { Csharp } from "@/components/ui/svgs/csharp";
 import ofLogo from "@/components/ui/of_profile.png";
 import sihLogo from "@/components/ui/sih.png";
 import bvLogo from "@/components/ui/bv.png";
@@ -22,27 +21,29 @@ export const DATA = {
   location: "India",
   locationLink: "https://www.google.com/maps/place/India",
   description:
-    "Full-stack engineer building customer-facing products and the backend systems behind them—from multi-chain trading interfaces to data pipelines and real-time services.",
+    "Built React trading features across four networks and backend integrations spanning Go, Redis, REST/WebSocket APIs, and EVM data pipelines.",
   summary:
-    "I like working across the product: understanding where a workflow is frustrating, building the interface, and following the data through the services behind it. At [Interstate](https://interstate.trade/landing), I built a multi-chain Trenches experience so users can scan Solana, BNB, Base, and Robinhood tokens together, and worked across React, Go, Redis, REST/WebSocket APIs, and EVM data pipelines. I have also built an idempotent wallet-ingestion pipeline and resumable ERC-20 balance-backfill tooling. Outside work, I am building a [perpetual futures exchange](/#projects) and an AI-based skill recommendation project.",
+    "At [Interstate](https://interstate.trade/landing), I built a Trenches experience for live Solana, BNB, Base, and Robinhood feeds; connected Go indexers and Redis-backed token services to React clients; and delivered holder-count provenance across four EVM chains. Other work includes idempotent ingestion for 1,064 KOL wallets, resumable ERC-20 balance backfills, and UI infrastructure supporting 56 venues and 53 smart-contract integrations. Outside work, I’m building a [perpetual futures exchange](/#projects) with Express/Bun, Redis Streams, and PostgreSQL. I also built a TF-IDF-based job-matching prototype.",
   avatarUrl: "/profile_photo.webp",
   skills: [
-    { name: "C++", icon: Csharp },
-    { name: "Go" },
-    { name: "JavaScript" },
-    { name: "TypeScript", icon: Typescript },
-    { name: "Python", icon: Python },
     { name: "React", icon: ReactLight },
+    { name: "TypeScript", icon: Typescript },
+    { name: "JavaScript" },
+    { name: "Go" },
     { name: "Node.js", icon: Nodejs },
-    { name: "FastAPI" },
-    { name: "Tailwind CSS" },
-    { name: "Prisma" },
-    { name: "Postgres", icon: Postgresql },
-    { name: "Supabase" },
-    { name: "BigQuery" },
+    { name: "Express" },
+    { name: "Python", icon: Python },
     { name: "Redis Streams" },
-    { name: "Websockets" },
+    { name: "Postgres", icon: Postgresql },
+    { name: "Prisma" },
+    { name: "WebSockets" },
+    { name: "Tailwind CSS" },
     { name: "Docker", icon: Docker },
+    { name: "BigQuery" },
+    { name: "Supabase" },
+    { name: "EVM" },
+    { name: "ERC-20" },
+    { name: "RPC" },
     { name: "Git" },
   ],
   navbar: [
@@ -95,14 +96,14 @@ export const DATA = {
       start: "July 2026",
       end: "Present",
       description:
-        "Built product features and backend systems across Interstate's multi-chain trading experience. The work spans React interfaces, Go indexers, Redis, token services, and REST/WebSocket APIs.",
+        "Built React product features and connected them to Go indexers, Redis-backed token services, and REST/WebSocket APIs across a multi-chain trading product.",
       highlights: [
-        "Built a multi-chain Trenches experience combining live Solana, BNB, Base, and Robinhood feeds, so users can scan tokens across chains without switching views. Kept filters, trade routes, and quick-buy amounts chain-specific.",
-        "Added verified quote-token badges to trade pages, hiding native-token badges and linking to a quote asset's chart only when candle data is available.",
-        "Connected Go indexers, Redis, token services, REST/WebSocket APIs, and React clients to preserve holder-count provenance across four EVM chains.",
-        "Built an idempotent ingestion pipeline for 1,064 KOL wallets, using strict address validation and transactional upserts to prevent duplicate records.",
-        "Developed resumable ERC-20 balance-backfill tooling with incremental watermarks, reconciliation, adaptive RPC scanning, and execution-budget planning.",
-        "Built reusable chain and launchpad UI infrastructure across Pulse, search, portfolio, and trade pages for 56 venues; validated 53 smart-contract integrations with typed configuration and automated tests."
+        "Unified four live feeds—Solana, BNB, Base, and Robinhood—in the Trenches view while preserving chain-specific filters, trade routes, and quick-buy behavior.",
+        "Added quote-token badges that hide native-token legs and link to quote charts only when OHLC candles are available.",
+        "Connected holder-count provenance across four EVM chains by integrating Go indexers, Redis token services, REST/WebSocket APIs, and React clients.",
+        "Supported 56 venues and validated 53 smart-contract integrations with reusable chain/launchpad UI, typed configuration, and automated tests.",
+        "Prevented duplicate records across 1,064 KOL wallet ingestions using strict address validation and transactional upserts.",
+        "Made ERC-20 balance backfills resumable through incremental watermarks, reconciliation, adaptive RPC scanning, and execution-budget planning."
       ],
     },
     {
@@ -110,15 +111,14 @@ export const DATA = {
       href: "#",
       badges: [],
       location: "Remote",
-      title: "Data Scientist",
+      title: "Data Analyst",
       logoUrl: ofLogo,
       start: "October 2025",
       end: "March 2026",
       description:
-        "Used BigQuery to investigate claims and operational data, trace missing ERA records, and identify the claims affected. The analysis supported the recovery of 100,000 claims and informed recurring data-quality reporting.",
+        "Used BigQuery to trace missing ERA records and identify affected claims; the analysis supported recovery of 100,000 claims and recurring data-quality reporting.",
       highlights: [
-        "Analyzed claims and operational datasets in BigQuery to surface data-quality problems and claim-processing discrepancies for investigation.",
-        "Identified records affected by missing Electronic Remittance Advice (ERA) data, contributing to the recovery of 100,000 claims.",
+        "Helped identify records associated with the recovery of 100,000 claims by tracing missing Electronic Remittance Advice (ERA) data in BigQuery.",
         "Automated recurring reports, exception alerts, and stakeholder emails to reduce manual data extraction and reporting work."
       ],
     },
@@ -140,7 +140,7 @@ export const DATA = {
       dates: "May 2026 - Present",
       active: true,
       description:
-        "Built a low-latency, event-driven perpetual futures exchange using Express, Bun, Redis Streams, and PostgreSQL (Prisma). Implemented in-memory order matching with margin/position management, JWT auth, live Binance WebSocket market data ingestion, and real-time price-feed handling for liquidation logic — with an event-driven command flow (backend → engine → DB) using Redis consumer groups for durable order handling.",
+        "Built an event-driven perpetual-futures exchange with Express/Bun, Redis Streams, and PostgreSQL/Prisma. Implemented in-memory order matching, margin and position management, JWT authentication, and live Binance market-data ingestion over WebSockets for price updates and liquidation logic. Routed order commands through the backend, matching engine, and database with Redis consumer groups for durable handling.",
       technologies: [
         "Express",
         "Bun",
@@ -166,39 +166,12 @@ export const DATA = {
       video: "",
     },
     {
-      title: "AI Skill Recommendation System",
-      href: "https://career-compass-xi-ivory.vercel.app/",
-      dates: "Feb 2026 - Apr 2026",
-      active: true,
-      description:
-        "Python-based recommendation system that uses TF-IDF and cosine similarity to match user profiles against job requirements, recommending missing skills, relevant companies, and salary insights.",
-      technologies: [
-        "Python",
-        "TF-IDF",
-        "Cosine Similarity",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://career-compass-xi-ivory.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Demo",
-          href: "https://drive.google.com/file/d/1kT2bmfWKYw8GLTdctiWO3RejeOjAfTPx/view?usp=drive_link",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: skillRecLogo,
-      video: "",
-    },
-    {
-      title: "FunShiksha",
+      title: "FunShiksha — Offline-First STEM PWA",
       href: "https://zesty-valkyrie-025e82.netlify.app/class-selection",
       dates: "Oct 2025 - Nov 2025",
       active: true,
       description:
-        "Offline-first multilingual PWA for rural STEM education with dynamic translation and a teacher dashboard for progress tracking. Built for Smart India Hackathon 2025 (Top 45 nationwide) and delivered in 3–4 days with a 6-member team.",
+        "Built an offline-first multilingual STEM-learning PWA for rural learners, with dynamic translation and a teacher dashboard. Delivered with a 6-member team in 3–4 days for Smart India Hackathon 2025; selected among the Top 45 teams nationwide.",
       technologies: [
         "PWA",
         "React",
@@ -218,6 +191,33 @@ export const DATA = {
         },
       ],
       image: funshikshaLogo,
+      video: "",
+    },
+    {
+      title: "Content-Based Job Matcher",
+      href: "https://career-compass-xi-ivory.vercel.app/",
+      dates: "Feb 2026 - Apr 2026",
+      active: true,
+      description:
+        "Python prototype using TF-IDF and cosine similarity to rank profile/job-description matches and surface potential skill gaps, related companies, and salary insights.",
+      technologies: [
+        "Python",
+        "TF-IDF",
+        "Cosine Similarity",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://career-compass-xi-ivory.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Demo",
+          href: "https://drive.google.com/file/d/1kT2bmfWKYw8GLTdctiWO3RejeOjAfTPx/view?usp=drive_link",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: skillRecLogo,
       video: "",
     },
   ],
