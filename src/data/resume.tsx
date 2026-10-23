@@ -110,12 +110,17 @@ export const DATA = {
       href: "#",
       badges: [],
       location: "Remote",
-      title: "Data Analyst",
+      title: "Data Scientist",
       logoUrl: ofLogo,
       start: "October 2025",
       end: "March 2026",
       description:
-        "Worked on large-scale data pipelines using BigQuery, built automated reporting systems, and helped recover ~100k claims by identifying a critical data issue.",
+        "Used BigQuery to investigate claims and operational data, trace missing ERA records, and identify the claims affected. The analysis supported the recovery of 100,000 claims and informed recurring data-quality reporting.",
+      highlights: [
+        "Analyzed claims and operational datasets in BigQuery to surface data-quality problems and claim-processing discrepancies for investigation.",
+        "Identified records affected by missing Electronic Remittance Advice (ERA) data, contributing to the recovery of 100,000 claims.",
+        "Automated recurring reports, exception alerts, and stakeholder emails to reduce manual data extraction and reporting work."
+      ],
     },
   ],
   education: [
