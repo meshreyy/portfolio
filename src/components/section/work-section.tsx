@@ -78,7 +78,14 @@ export default function WorkSection() {
             </div>
           </AccordionTrigger>
           <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground">
-            {work.description}
+            <p>{work.description}</p>
+            {"highlights" in work ? (
+              <ul className="mt-3 list-disc space-y-1.5 pl-4">
+                {work.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+            ) : null}
           </AccordionContent>
         </AccordionItem>
       ))}

@@ -22,12 +22,13 @@ export const DATA = {
   location: "India",
   locationLink: "https://www.google.com/maps/place/India",
   description:
-    "Full-Stack Engineer building low-latency systems, AI applications, and developer tools.",
+    "Full-stack engineer building customer-facing products and the backend systems behind them—from multi-chain trading interfaces to data pipelines and real-time services.",
   summary:
-    "Full-Stack Engineer focused on low-latency systems, AI products, and developer tools. At [Interstate](https://interstate.trade/landing), I owned multi-chain holder-count infrastructure spanning Go indexers, Redis, token services, APIs, and React clients, while building reusable integrations across 56 launchpads. I also shipped a [Skill Recommendation System](/#projects) with TF-IDF and cosine similarity and placed in the Top 45 teams at SIH 2025.",
+    "I like working across the product: understanding where a workflow is frustrating, building the interface, and following the data through the services behind it. At [Interstate](https://interstate.trade/landing), I built a multi-chain Trenches experience so users can scan Solana, BNB, Base, and Robinhood tokens together, and worked across React, Go, Redis, REST/WebSocket APIs, and EVM data pipelines. I have also built an idempotent wallet-ingestion pipeline and resumable ERC-20 balance-backfill tooling. Outside work, I am building a [perpetual futures exchange](/#projects) and an AI-based skill recommendation project.",
   avatarUrl: "/profile_photo.webp",
   skills: [
     { name: "C++", icon: Csharp },
+    { name: "Go" },
     { name: "JavaScript" },
     { name: "TypeScript", icon: Typescript },
     { name: "Python", icon: Python },
@@ -47,7 +48,7 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     {
-      href: "/Shreya_Jha_Resume.pdf",
+      href: "/Shreya_Jha.pdf",
       icon: FileTextIcon,
       label: "Resume",
     },
@@ -92,17 +93,24 @@ export const DATA = {
       title: "Full Stack Engineer",
       logoUrl: interstateLogo,
       start: "July 2026",
-      end: "October 2026",
+      end: "Present",
       description:
-        "Owned multi-chain holder-count infrastructure across Go indexers, Redis, APIs, and React clients for four EVM chains. Built idempotent KOL ingestion and safe ERC-20 backfill tooling, while developing reusable chain and launchpad integrations supporting 56 venues.",
+        "Built product features and backend systems across Interstate's multi-chain trading experience. The work spans React interfaces, Go indexers, Redis, token services, and REST/WebSocket APIs.",
+      highlights: [
+        "Built a multi-chain Trenches experience combining live Solana, BNB, Base, and Robinhood feeds, so users can scan tokens across chains without switching views. Kept filters, trade routes, and quick-buy amounts chain-specific.",
+        "Added verified quote-token badges to trade pages, hiding native-token badges and linking to a quote asset's chart only when candle data is available.",
+        "Connected Go indexers, Redis, token services, REST/WebSocket APIs, and React clients to preserve holder-count provenance across four EVM chains.",
+        "Built an idempotent ingestion pipeline for 1,064 KOL wallets, using strict address validation and transactional upserts to prevent duplicate records.",
+        "Developed resumable ERC-20 balance-backfill tooling with incremental watermarks, reconciliation, adaptive RPC scanning, and execution-budget planning.",
+        "Built reusable chain and launchpad UI infrastructure across Pulse, search, portfolio, and trade pages for 56 venues; validated 53 smart-contract integrations with typed configuration and automated tests."
+      ],
     },
     {
       company: "Ocean Friends",
       href: "#",
       badges: [],
       location: "Remote",
-      title: "Data Analytics Intern",
-      
+      title: "Data Analyst",
       logoUrl: ofLogo,
       start: "October 2025",
       end: "March 2026",
@@ -124,7 +132,7 @@ export const DATA = {
     {
       title: "Perp CEX",
       href: "https://prep-cex-backend.vercel.app/",
-      dates: "May 2026 - Jun 2026",
+      dates: "May 2026 - Present",
       active: true,
       description:
         "Built a low-latency, event-driven perpetual futures exchange using Express, Bun, Redis Streams, and PostgreSQL (Prisma). Implemented in-memory order matching with margin/position management, JWT auth, live Binance WebSocket market data ingestion, and real-time price-feed handling for liquidation logic — with an event-driven command flow (backend → engine → DB) using Redis consumer groups for durable order handling.",
